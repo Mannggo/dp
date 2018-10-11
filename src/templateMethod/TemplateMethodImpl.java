@@ -1,3 +1,5 @@
+package templateMethod;
+
 /**
  * @author 谢仲东 2018/8/8 22:09
  * Description:
