@@ -17,7 +17,8 @@ public class Client {
         users.add(new User(18, "Jetty", 171.3));
         users.add(new User(14, "Oran", 151.7));
 
-        Specification condition = new AgeThanSpec(12).and(new HeightThanSpec(120.0));
+        // 查询年龄大于12 身高高于120 且名字不为Jetty 的实体
+        Specification condition = new AgeThanSpec(12).and(new HeightThanSpec(120.0)).and(new NameEqualSpec("Jetty").not());
         users.forEach(u -> {
             if (condition.isSatisfiedBy(u)) {
                 System.out.println(u);
